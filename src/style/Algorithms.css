@@ -1,0 +1,35 @@
+/* Graphs.css or Algorithms.css */
+
+.algorithm-container {
+  margin: 20px;
+}
+
+.algorithm-buttons button {
+  margin: 5px;
+}
+
+.algorithm-result {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.node-animation {
+  transition: all 0.5s ease;
+}
+
+.node-animation.highlighted {
+  transform: scale(1.5);
+  background-color: #ff6347; /* Example highlight color */
+}
+
+.link-animation {
+  transition: all 0.5s ease;
+}
+
+.link-animation.highlighted {
+  stroke-width: 5;
+  stroke: #ff6347; /* Example highlight color */
+  stroke-dasharray: 5, 5;
+}

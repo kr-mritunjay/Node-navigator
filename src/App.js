@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import { React, useState, useEffect } from "react";
+import "./App.css";
+import GraphComponent from "./components/Graph";
+import "../src/style/Graphs.css";
 
-function App() {
+// import data from "./data/data";
+
+const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
+  useEffect(() => {
+    document.body.classList.toggle("dark-mode", darkMode);
+  }, [darkMode]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Node Navigator</h1>
+      <button
+        className="dark-mode-toggle"
+        onClick={() => setDarkMode(!darkMode)}
+        style={{
+          padding: "10px 20px",
+          fontSize: "16px",
+          alignItems: "center",
+          gap: "30px",
+          background: darkMode ? "grey" : "black",
+        }}
+      ></button>
+
+      <GraphComponent />
     </div>
   );
-}
+};
 
 export default App;

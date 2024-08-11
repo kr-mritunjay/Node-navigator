@@ -135,7 +135,7 @@ const GraphComponent = () => {
       <div className="graph-left">
         <h2>Graph Creation</h2>
         <textarea
-          placeholder="Enter adjacency list as 2D array"
+          placeholder="Enter adjacency list as 2D array Ex - [[souce,destination,weight]]"
           rows="10"
           cols="50"
           value={adjacencyListInput}

@@ -3,6 +3,7 @@ import { React, useState, useEffect } from "react";
 import "./App.css";
 import GraphComponent from "./components/Graph";
 import "../src/style/Graphs.css";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 // import data from "./data/data";
 
@@ -14,17 +15,9 @@ const App = () => {
   return (
     <div>
       <h1>Node Navigator</h1>
-      <button
-        className="dark-mode-toggle"
-        onClick={() => setDarkMode(!darkMode)}
-        style={{
-          padding: "10px 20px",
-          fontSize: "16px",
-          alignItems: "center",
-          gap: "30px",
-          background: darkMode ? "grey" : "black",
-        }}
-      ></button>
+      <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
+        {darkMode ? <FaSun /> : <FaMoon />}
+      </button>
 
       <GraphComponent />
     </div>
